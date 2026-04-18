@@ -36,4 +36,22 @@ public class Practice {
         }
         return longest;
     }
+
+    //count of odd values 
+    public static int oddEvenDiff(HashMap<String, Integer> map) {
+        int odd = 0;
+        int even = 0;
+        for (int value : map.values()) {
+            if (value % 2 == 0) {
+                even++;
+            } else {
+                odd++;  
+            }
+            return Math.abs(odd - even);
+        }
+        return odd - even;
+    }
+
+    // count words with leng > n and length < m
+    
 }
