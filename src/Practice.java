@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.HashSet;
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -36,4 +39,42 @@ public class Practice {
         }
         return longest;
     }
+
+    //count of odd values 
+       public static int oddEvenDiff(HashMap<String, Integer> map) {
+        int odd  = 0;
+        int even = 0;
+        for (int val : map.values()) {
+            if (val % 2 == 0) even++;
+            else              odd++;
+        }
+        return Math.abs(odd - even);
+    }
+
+    // count words with leng > n and length < m
+    public static int countWordsInRange(HashSet<String> words, int n, int m) {
+        int count = 0;
+        for (String word : words) {
+            if (word.length() > n && word.length() < m) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    // second largest num - hashset?
+    public static int secondLargest(HashSet<Integer> nums) {
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+        for (int n : nums) {
+            if (n > largest) {
+                secondLargest = largest;
+                largest = n;
+            } else if (n > secondLargest && n < largest) {
+                secondLargest = n;
+            }
+        }
+        return secondLargest;
+    }
 }
+
