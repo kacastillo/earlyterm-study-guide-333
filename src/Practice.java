@@ -64,6 +64,7 @@ public class Practice {
 
     // second largest num - hashset?
     public static int secondLargest(HashSet<Integer> nums) {
+        
         int largest = Integer.MIN_VALUE;
         int secondLargest = Integer.MIN_VALUE;
         for (int n : nums) {
