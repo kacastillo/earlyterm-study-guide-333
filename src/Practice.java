@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -30,7 +31,7 @@ public class Practice {
     // do maxDiff with an array, the next question with a Set, etc.
 
     //longest word that starts with a given letter
-    public static String longestWordStartingWith(String[] words, char letter) {
+    public static String longestWordStartingWith(ArrayList<String> words, char letter) {
         String longest = "";
         for (String word : words) {
            if (word.length() > longest.length() && word.charAt(0) == letter) {

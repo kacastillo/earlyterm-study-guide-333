@@ -1,5 +1,8 @@
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.junit.jupiter.api.Test;
 
 public class PracticeTest {
@@ -71,6 +74,37 @@ public class PracticeTest {
 
     // TODO: Make tests for each problem you solve
     
+
+    // longestwordstartingwith tests
+
+     @Test // Normal case: multiple words starting with the letter
+    void testLongestWordNormalMatch() {
+        // Arrange
+        ArrayList<String> words = new ArrayList<>(
+         Arrays.asList("apple", "avocado", "banana", "apricot"));
+
+        // Act
+        String actual = Practice.longestWordStartingWith(words, 'a');
+
+        // Assert 
+        assertEquals("avocado", actual);
+    }
+
+    @Test //  case: no words starting with the letter
+    void testLongestWordSingleMatch() {
+        // Arrange
+        ArrayList<String> words = new ArrayList<>(
+            
+        Arrays.asList("apple", "banana", "cherry"));
+
+        // Act
+        String actual = Practice.longestWordStartingWith(words, 'b');
+
+        // Assert 
+        assertEquals("banana", actual);
+    }
+
+
 }
 
 
