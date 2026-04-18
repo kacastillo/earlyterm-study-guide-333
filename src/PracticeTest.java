@@ -18,7 +18,7 @@ public class PracticeTest {
         assertEquals(14, actual);
     }
 
-     @Test
+     @Test // Edge case: all numbers are positive
     void testMaxDiffAllPositive() {
         // Arrange
         int[] numbers = {1, 3, 7, 2};
@@ -30,7 +30,7 @@ public class PracticeTest {
         assertEquals(6, actual);
     }
 
-     @Test
+     @Test // Edge case: all numbers are negative
     void testMaxDiffAllNegative() {
         // Arrange
         int[] numbers = {-10, -3, -6};
@@ -41,6 +41,19 @@ public class PracticeTest {
         // Assert — largest: -3, smallest: -10, diff: 7
         assertEquals(7, actual);
     }
+
+     @Test // Edge case: all numbers are the same
+    void testMaxDiffAllSame() {
+        // Arrange
+        int[] numbers = {5, 5, 5};
+
+        // Act
+        int actual = Practice.maxDiff(numbers);
+
+        // Assert — no spread, diff: 0
+        assertEquals(0, actual);
+    }
+
 
     
 
