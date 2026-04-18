@@ -54,6 +54,18 @@ public class PracticeTest {
         assertEquals(0, actual);
     }
 
+     @Test // Edge case: includes zero
+    void testMaxDiffIncludesZero() {
+        // Arrange
+        int[] numbers = {0, -4, 6};
+
+        // Act
+        int actual = Practice.maxDiff(numbers);
+
+        // Assert — largest: 6, smallest: -4, diff: 10
+        assertEquals(10, actual);
+    }
+
 
     
 
