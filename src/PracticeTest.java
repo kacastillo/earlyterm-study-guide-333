@@ -198,6 +198,20 @@ public class PracticeTest {
         assertEquals(1, actual);
     }
 
+      // ════════════════════════════════════════════════════════
+    //  secondLargest
+    // ════════════════════════════════════════════════════════
+
+    @Test
+    void testSecondLargestNormalCase() {
+        // Arrange
+        HashSet<Integer> nums = new HashSet<>(Arrays.asList(10, 50, 30, 20));
+        // Act
+        int actual = Practice.secondLargest(nums);
+        // Assert 
+        assertEquals(30, actual);
+    }
+
 }
 
 
