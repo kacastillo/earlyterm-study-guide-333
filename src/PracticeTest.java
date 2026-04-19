@@ -173,6 +173,17 @@ public class PracticeTest {
         // Assert 
         assertEquals(3, actual);
     }
+      @Test
+    void testOddEvenDiffAllOdd() {
+        // Arrange
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("a", 1);
+        map.put("b", 3);
+        // Act
+        int actual = Practice.oddEvenDiff(map);
+        // Assert 
+        assertEquals(2, actual);
+    }
 
      @Test
     void testOddEvenDiffIncludesZero() {
