@@ -2,6 +2,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 
 import org.junit.jupiter.api.Test;
 
@@ -115,6 +116,23 @@ public class PracticeTest {
         // Assert — empty list --> nothing to find
         assertEquals("", actual);
     }
+
+    // 2nd method tests 
+
+     @Test
+    void testCountWordsInRangeNormalCase() {
+        // Arrange
+        HashSet<String> words = new HashSet<>(
+                Arrays.asList("hi", "cat", "hello", "elephant", "ok"));
+       
+
+        // Act
+        int actual = Practice.countWordsInRange(words, 2, 6);
+
+        // Assert 
+        assertEquals(2, actual);
+    }
+
 
 }
 
