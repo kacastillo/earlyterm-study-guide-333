@@ -212,6 +212,26 @@ public class PracticeTest {
         assertEquals(30, actual);
     }
 
+     @Test
+    void testSecondLargestAllNegative() {
+        // Arrange
+        HashSet<Integer> nums = new HashSet<>(Arrays.asList(-1, -5, -3));
+        // Act
+        int actual = Practice.secondLargest(nums);
+        // Assert 
+        assertEquals(-3, actual);
+    }
+
+     @Test
+    void testSecondLargestTwoElements() {
+        // Arrange
+        HashSet<Integer> nums = new HashSet<>(Arrays.asList(1, 100));
+        // Act
+        int actual = Practice.secondLargest(nums);
+        // Assert
+        assertEquals(1, actual);
+    }
+
 }
 
 
