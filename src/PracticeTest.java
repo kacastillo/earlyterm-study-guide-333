@@ -104,6 +104,17 @@ public class PracticeTest {
         assertEquals("banana", actual);
     }
 
+    @Test //empty list (no words to check)
+    void testLongestWordEmptyList() {
+        // Arrange
+        ArrayList<String> words = new ArrayList<>();
+
+        // Act
+        String actual = Practice.longestWordStartingWith(words, 'a');
+
+        // Assert — empty list --> nothing to find
+        assertEquals("", actual);
+    }
 
 }
 
