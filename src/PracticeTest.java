@@ -2,6 +2,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 
 import org.junit.jupiter.api.Test;
@@ -155,6 +156,35 @@ public class PracticeTest {
         int actual = Practice.countWordsInRange(words, 2, 4);
         // Assert — all length 3, which is > 2 and < 4
         assertEquals(3, actual);
+    }
+     // ════════════════════════════════════════════════════════
+    // oddEvenDiff
+    // ════════════════════════════════════════════════════════
+
+     @Test 
+    void testOddEvenDiffAllEven() {
+        // Arrange
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("a", 2);
+        map.put("b", 4);
+        map.put("c", 6);
+        // Act
+        int actual = Practice.oddEvenDiff(map);
+        // Assert 
+        assertEquals(3, actual);
+    }
+
+     @Test
+    void testOddEvenDiffIncludesZero() {
+        // Arrange
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("a", 0);  // even
+        map.put("b", 1);  // odd
+        map.put("c", 3);  // odd
+        // Act
+        int actual = Practice.oddEvenDiff(map);
+        // Assert 
+        assertEquals(1, actual);
     }
 
 }
