@@ -76,7 +76,10 @@ public class PracticeTest {
     // TODO: Make tests for each problem you solve
     
 
-    // longestwordstartingwith tests
+    // ══════════════════════════
+    //  longestWordStartingWith
+    // ══════════════════════════
+
 
      @Test // Normal case: multiple words starting with the letter
     void testLongestWordNormalMatch() {
@@ -117,7 +120,9 @@ public class PracticeTest {
         assertEquals("", actual);
     }
 
-    // 2nd method tests 
+     // ══════════════════════════
+     //  countWordsInRange
+    // ══════════════════════════
 
      @Test
     void testCountWordsInRangeNormalCase() {
@@ -132,7 +137,25 @@ public class PracticeTest {
         // Assert 
         assertEquals(2, actual);
     }
+     @Test
+    void testCountWordsInRangeNoneQualify() {
+        // Arrange
+        HashSet<String> words = new HashSet<>(Arrays.asList("hi", "ok", "no"));
+        // Act
+        int actual = Practice.countWordsInRange(words, 5, 10);
+        // Assert — all words length 2; none > 5
+        assertEquals(0, actual);
+    }
 
+    @Test
+    void testCountWordsInRangeAllQualify() {
+        // Arrange
+        HashSet<String> words = new HashSet<>(Arrays.asList("cat", "dog", "hat"));
+        // Act
+        int actual = Practice.countWordsInRange(words, 2, 4);
+        // Assert — all length 3, which is > 2 and < 4
+        assertEquals(3, actual);
+    }
 
 }
 
